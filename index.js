@@ -5,7 +5,7 @@ const personagem = document.querySelector("img")
 const level = document.getElementById("lvl");
 const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
-let count = 149;
+let count = 0;
 
 
 btnPositive.addEventListener("click", () => {
