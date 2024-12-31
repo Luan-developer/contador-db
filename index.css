@@ -84,6 +84,7 @@ img {
     /* Remove espaçamentos extras */
     max-width: 100%;
     /* Garante que a largura máxima não ultrapasse o container */
+    object-fit: contain;
 }
 
 #personagem>img {
@@ -93,6 +94,7 @@ img {
     /* Mantém a proporção da imagem */
     border-radius: 8px;
     /* Adiciona bordas arredondadas */
+    object-fit: contain;
 }
 
 
