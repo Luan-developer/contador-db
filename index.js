@@ -8,7 +8,7 @@ const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
 
 //variavel que armazena o número do nivel
-let count = 139;
+let count = 0;
 
 // Função para aumentar o nivel do personagem
 function LevelUp() {
