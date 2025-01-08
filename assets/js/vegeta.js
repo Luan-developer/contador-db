@@ -8,7 +8,7 @@ const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
 
 //variavel que armazena o número do nivel
-let count = 14;
+let count = 0;
 
 alert("Site em andamento")
 
