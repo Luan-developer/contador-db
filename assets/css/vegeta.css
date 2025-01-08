@@ -107,7 +107,7 @@ img {
     height: 100%;
 }
 
-button {
+.btn {
     width: 200px;
     height: 50px;
     display: flex;
@@ -132,4 +132,22 @@ button {
 
 button:hover {
     opacity: .8;
+}
+
+.outros-personagens {
+    margin-top: 5px;
+    width: 60px;
+    height: 40px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+}
+
+.outros-personagens a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.outros-personagens.goku{
+    background-color: orange;
 }

@@ -6,6 +6,7 @@ const personagem = document.querySelector("img");
 const level = document.getElementById("lvl");
 const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
+const body = document.querySelector(".body");
 
 //variavel que armazena o número do nivel
 let count = 0;
@@ -196,13 +197,19 @@ personagem.addEventListener("click", () => {
         personagem.setAttribute("src", "./assets/img/goku-adulto.gif");
         personagem.style.width = "400px";
         personagem.style.height = "300px";
-    } else if (count === 30) {
+        body.style.background = "./assets/img/goku-adulto.gif"
+    }else if(count === 25){
+        personagem.setAttribute("src", "./assets/img/goku-kaioken.gif");
+        personagem.style.width = "400px";
+        personagem.style.height = "300px";
+    } 
+    else if (count === 30) {
         personagem.setAttribute("src", "./assets/img/goku-ssj1.gif");
         personagem.style.width = "400px";
         personagem.style.height = "300px";
     } else if (count === 40) {
-        personagem.setAttribute("src", "./assets/img/goku-5.1.png");
-        personagem.style.width = "300px";
+        personagem.setAttribute("src", "./assets/img/goku-ssj2.gif");
+        personagem.style.width = "400px";
         personagem.style.height = "300px";
     } else if (count === 50) {
         personagem.setAttribute("src", "./assets/img/goku-ssj3.gif");
@@ -218,7 +225,11 @@ personagem.addEventListener("click", () => {
         personagem.setAttribute("src", "./assets/img/goku-blue.gif");
         personagem.style.width = "400px";
         personagem.style.height = "300px";
-    } else if (count === 100) {
+    } else if (count === 80) {
+        personagem.setAttribute("src", "./assets/img/goku-blue-kaioken.gif");
+        personagem.style.width = "400px";
+        personagem.style.height = "300px";
+    }else if (count === 100) {
         personagem.setAttribute("src", "./assets/img/goku-migattenogokui-1.gif");
         personagem.style.width = "400px";
         personagem.style.height = "300px";
@@ -226,8 +237,8 @@ personagem.addEventListener("click", () => {
         personagem.setAttribute("src", "./assets/img/goku-migattenogokui-2.gif");
         personagem.style.width = "400px";
         personagem.style.height = "300px";
-    }else if(count === 140){
-        personagem.setAttribute("src","./assets/img/goku-migattenogokuperfect-1.gif");
+    } else if (count === 140) {
+        personagem.setAttribute("src", "./assets/img/goku-migattenogokuperfect-1.gif");
         personagem.style.width = "400px";
         personagem.style.height = "300px";
     }
