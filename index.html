@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador - Goku</title>
+    <title>Contador - animado</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="./assets/js/index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -13,16 +13,15 @@
 </head>
 
 <body class="body">
-    <header>
-        <button class="outros-personagens">
-            <a href="vegeta.html">Vegeta</a>
-        </button>
-    </header>
     <div class="container">
         <h2 id="nome-guerreiro">Son Goku (Criança)</h2>
         <div id="personagem">
-            <i id="reset" class="bi bi-arrow-clockwise"></i>
-            <img src="./assets/img/goku-1.png" id="guerreiro"/>
+            <select id="escolha-personagem" onchange="trocarPersonagem()">
+                <option value="">Selecionar o personagem</option>
+                <option value="vegeta.html">Vegeta</option>
+                <option value="index.html">Goku</option>
+            </select>
+            <img src="./assets/img/goku-1.png" id="guerreiro" />
             <div class="status">
                 <h3></h3>
                 <p>Nivel: <span id="lvl">0</span></p>

@@ -192,57 +192,12 @@ function ResetLevel() {
 btnPositive.addEventListener("click", LevelUp);
 btnNegative.addEventListener("click", RemoveLevel);
 reset.addEventListener("click", ResetLevel);
-personagem.addEventListener("click", () => {
-    if (count === 15) {
-        personagem.setAttribute("src", "./assets/img/goku-adulto.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-        body.style.background = "./assets/img/goku-adulto.gif"
-    }else if(count === 25){
-        personagem.setAttribute("src", "./assets/img/goku-kaioken.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    } 
-    else if (count === 30) {
-        personagem.setAttribute("src", "./assets/img/goku-ssj1.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    } else if (count === 40) {
-        personagem.setAttribute("src", "./assets/img/goku-ssj2.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    } else if (count === 50) {
-        personagem.setAttribute("src", "./assets/img/goku-ssj3.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "220px";
-    }
-    else if (count === 60) {
-        personagem.setAttribute("src", "./assets/img/goku-ssjgod.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    }
-    else if (count === 70) {
-        personagem.setAttribute("src", "./assets/img/goku-blue.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    } else if (count === 80) {
-        personagem.setAttribute("src", "./assets/img/goku-blue-kaioken.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    }else if (count === 100) {
-        personagem.setAttribute("src", "./assets/img/goku-migattenogokui-1.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    } else if (count === 120) {
-        personagem.setAttribute("src", "./assets/img/goku-migattenogokui-2.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    } else if (count === 140) {
-        personagem.setAttribute("src", "./assets/img/goku-migattenogokuperfect-1.gif");
-        personagem.style.width = "400px";
-        personagem.style.height = "300px";
-    }
-})
 
 
-
+function trocarPersonagem() {
+    const select = document.getElementById("escolha-personagem");
+    const url = select.value; // Obtém o valor da opção selecionada
+    if (url) {
+        window.location.href = url; // Redireciona para a página correspondente
+    }
+}

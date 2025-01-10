@@ -10,7 +10,6 @@ let h2 = document.querySelector("h2");
 //variavel que armazena o número do nivel
 let count = 0;
 
-alert("Site em andamento")
 
 function LevelUp() {
     const AddLevel = () => {
@@ -35,9 +34,9 @@ function LevelUp() {
         h2.textContent = "Vegeta (Ssj)";
         personagem.style.width = "200px";
     } else if (count === 29) {
-        personagem.setAttribute("src", "./assets/img/goku-4.png");
-        h2.style.color = "yellow";
-        h2.textContent = "Son Goku (Ssj)"
+        personagem.setAttribute("src", "/assets/img/vegeta-img/vegeta-ssj2.jpg");
+        h2.style.color = "rgb(191, 202, 27)";
+        h2.textContent = "Vegeta (Ssj2)"
         personagem.style.width = "200px"
     } else if (count === 39) {
         personagem.setAttribute("src", "./assets/img/goku-5.png");
@@ -92,6 +91,12 @@ function LevelUp() {
     addStrength();
 }
 
-
-
 btnPositive.addEventListener("click", LevelUp);
+
+function trocarPersonagem() {
+    const select = document.getElementById("escolha-personagem");
+    const url = select.value; // Obtém o valor da opção selecionada
+    if (url) {
+        window.location.href = url; // Redireciona para a página correspondente
+    }
+}
