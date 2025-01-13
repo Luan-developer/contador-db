@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador - animado</title>
     <!-- <link rel="stylesheet" href="./assets/css/vegeta.css"> -->
-     <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="./assets/js/vegeta.js"defer></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="shortcut icon" href="./assets/img/esferas-db.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/vegeta.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="./assets/img/esferas-db.png" type="image/x-icon">
 </head>
 
 <body>
+    <header>
+        <figure>
+            <img src="/assets/img/logo-db.png" id="db-logo" alt="logo-db">
+        </figure>
+    </header>
     <div class="container">
         <h2 id="nome-guerreiro">Vegeta (Criança)</h2>
         <div id="personagem">
-                        <select id="escolha-personagem" onchange="trocarPersonagem()">
-                            <option value="">Selecionar o personagem</option>
-                            <option value="vegeta.html">Vegeta</option>
-                            <option value="index.html">Goku</option>
-                        </select>
+            <select id="escolha-personagem" onchange="trocarPersonagem()">
+                <option selected>Selecione o personagem</option>
+                <option value="vegeta.html">Vegeta</option>
+                <option value="index.html">Goku</option>
+            </select>
             <img src="./assets/img/vegeta-img/vegeta-kid.png" id="guerreiro" />
             <div class="status">
                 <h3></h3>
