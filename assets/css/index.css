@@ -147,9 +147,8 @@ button:hover {
 }
 
 #db-logo{
-    width: 200px;
-    position: absolute;
+    width: 70px;
+    position: relative;
     left: 0;
     top: 0;
-    margin-left: 15px;
 }
