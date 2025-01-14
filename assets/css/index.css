@@ -91,7 +91,6 @@ img {
     /* Define largura fixa */
     height: auto;
     /* Mantém a proporção da imagem */
-    border-radius: 8px;
     /* Adiciona bordas arredondadas */
     object-fit: contain;
 }
