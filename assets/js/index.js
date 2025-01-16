@@ -7,6 +7,7 @@ const level = document.getElementById("lvl");
 const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
 const body = document.querySelector(".body");
+const LogoDb = document.getElementById("db-logo");
 
 //variavel que armazena o número do nivel
 let count = 0;
@@ -37,7 +38,7 @@ function LevelUp() {
         personagem.setAttribute("src", "./assets/img/goku-4.png");
         h2.style.color = "rgb(191, 202, 27)";
         h2.textContent = "Son Goku (Ssj)"
-        personagem.style.width = "200px"
+        personagem.style.width = "180px"
     } else if (count === 39) {
         personagem.setAttribute("src", "./assets/img/goku-5.png");
         h2.style.color = "rgb(191, 202, 27)";
@@ -175,10 +176,24 @@ function RemoveLevel() {
     addStrength();
 }
 
+function Reset() {
+    // Reinicia os valores
+    count = 0;
+    level.textContent = "0"; // Atualiza o nível no HTML
+    strenght.textContent = "0"; // Atualiza a força no HTML
+
+    // Volta o personagem para o estado inicial
+    personagem.setAttribute("src", "./assets/img/goku-1.png"); // Caminho da imagem inicial
+    h2.textContent = "Son Goku (Criança)"; // Título inicial
+    h2.style.color = "#000"; // Cor inicial do texto
+    personagem.style.width = "175px"; // Largura inicial
+}
+
 //Eventos que chamam as suas devidas funções
 btnPositive.addEventListener("click", LevelUp);
-btnNegative.addEventListener("click", RemoveLevel);
-reset.addEventListener("click", ResetLevel);
+btnNegative.addEventListener("click", RemoveLevel); 
+LogoDb.addEventListener("click", Reset)
+
 
 
 function trocarPersonagem() {

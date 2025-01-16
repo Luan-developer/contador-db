@@ -151,4 +151,9 @@ button:hover {
     position: relative;
     left: 0;
     top: 0;
+    cursor:pointer;
+}
+
+#nome-guerreiro{
+    text-align: start;
 }

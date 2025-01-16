@@ -7,6 +7,7 @@ const level = document.getElementById("lvl");
 const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
 const body = document.querySelector(".body");
+const LogoDb = document.getElementById("db-logo");
 
 //variavel que armazena o número do nivel
 let count = 0;
@@ -44,43 +45,38 @@ function LevelUp() {
         h2.textContent = "Gohan (Ssj2 - Lendário)";
         personagem.style.width = "500px"
     } else if (count === 59) {
-        personagem.setAttribute("src", "./assets/img/goku-7.4.png");
-        h2.style.color = "red";
-        h2.textContent = "Son Goku (Ssj-god)"
+        personagem.setAttribute("src", "./assets/img/gohan-img/gohan-adulto.png");
+        h2.textContent = "Gohan (Jovem)"
         personagem.style.width = "200px"
     } else if (count === 69) {
-        personagem.setAttribute("src", "./assets/img/goku-8.png");
-        h2.style.color = "blue";
-        h2.textContent = "Son Goku (Ssj-blue)"
-        personagem.style.width = "270px"
+        personagem.setAttribute("src", "./assets/img/gohan-img/gohan-adulto-ssj1.png");
+        h2.style.color = "rgb(191, 202, 27)";
+        h2.textContent = "Gohan (Ssj)"
+        personagem.style.width = "200px"
     }
     else if (count === 79) {
-        personagem.setAttribute("src", "./assets/img/goku-7.5.png");
-        h2.style.color = "red";
-        h2.textContent = "Son Goku (Ssj-blue kaioken)"
-        personagem.style.width = "200px"
+        personagem.setAttribute("src", "./assets/img/gohan-img/gohan-adulto-ssj2.png");
+        h2.style.color = "rgb(191, 202, 27)";
+        h2.textContent = "Gohan (Ssj2)"
+        personagem.style.width = "350px"
     } else if (count === 99) {
-        personagem.setAttribute("src", "./assets/img/goku-11.png");
-        h2.style.color = "blue";
-        h2.textContent = "Son Goku (Instinto Superior)"
-        personagem.style.width = "200px"
+        personagem.setAttribute("src", "./assets/img/gohan-img/gohan-definitivo.png");
+        h2.style.color = "#000";
+        h2.textContent = "Gohan (Definitivo)"
+        personagem.style.width = "150px"
     }
     else if (count === 119) {
-        personagem.setAttribute("src", "./assets/img/goku-12.png");
-        h2.style.color = "blue";
-        h2.textContent = "Son Goku (Instinto Superior)"
-        personagem.style.width = "200px"
-    } else if (count === 139) {
-        personagem.setAttribute("src", "./assets/img/goku-13.png");
+        personagem.setAttribute("src", "./assets/img/gohan-img/gohan-bestial.png");
         h2.style.color = "#999";
-        h2.textContent = "Son Goku (Instinto Superior)"
-        personagem.style.width = "200px"
+        h2.textContent = "Gohan (Bestial)"
+        personagem.style.width = "170px"
     }
     else if (count === 149) {
-        personagem.setAttribute("src", "./assets/img/goku-14.png");
-        h2.style.color = "#ccc";
-        h2.textContent = "Son Goku (Instinto Superior Perfeito)"
-        personagem.style.width = "200px"
+        personagem.setAttribute("src", "./assets/img/gohan-img/gohan-bestial-1.png");
+        h2.style.color = "#999";
+        h2.textContent = "Gohan (Bestial)"
+        personagem.style.width = "600px"
+
     }
     AddLevel();
     addStrength();
@@ -170,10 +166,22 @@ function RemoveLevel() {
     addStrength();
 }
 
+function Reset() {
+    // Reinicia os valores
+    count = 0;
+    level.textContent = "0"; // Atualiza o nível no HTML
+    strenght.textContent = "0"; // Atualiza a força no HTML
+
+    // Volta o personagem para o estado inicial
+    personagem.setAttribute("src", "./assets/img/gohan-img/gohan-kid.png");
+    h2.textContent = "Gohan (Criança)"
+    personagem.style.width = "175px"
+}
+
 //Eventos que chamam as suas devidas funções
 btnPositive.addEventListener("click", LevelUp);
 btnNegative.addEventListener("click", RemoveLevel);
-reset.addEventListener("click", ResetLevel);
+LogoDb.addEventListener("click", Reset);
 
 
 function trocarPersonagem() {

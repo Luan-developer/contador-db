@@ -6,9 +6,10 @@ const personagem = document.querySelector("#guerreiro");
 const level = document.getElementById("lvl");
 const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
+const LogoDb = document.getElementById("db-logo");
 
 //variavel que armazena o número do nivel
-let count =0;
+let count = 0;
 
 
 function LevelUp() {
@@ -92,8 +93,22 @@ function LevelUp() {
 }
 
 
+function Reset() {
+    // Reinicia os valores
+    count = 0;
+    level.textContent = "0"; // Atualiza o nível no HTML
+    strenght.textContent = "0"; // Atualiza a força no HTML
+
+    // Volta o personagem para o estado inicial
+    personagem.setAttribute("src", "./assets/img/vegeta-img/vegeta-kid.png");
+    h2.textContent = "Vegeta (Criança)"
+    personagem.style.width = "175px"
+}
+
+
 btnPositive.addEventListener("click", LevelUp);
 btnNegative.addEventListener("click", RemoveLevel);
+LogoDb.addEventListener("click", Reset);
 
 function trocarPersonagem() {
     const select = document.getElementById("escolha-personagem");
