@@ -146,14 +146,15 @@ button:hover {
     color: #fff;
 }
 
-#db-logo{
+#db-logo,
+#logo-pkm {
     width: 70px;
     position: relative;
     left: 0;
     top: 0;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#nome-guerreiro{
+#nome-guerreiro {
     text-align: start;
 }

@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador - animado</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/ash.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" href="./assets/img/esferas-db.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/ash-img/icon-pokebola.png"  type="image/x-icon">
 
 </head>
 
 <body class="body">
     <header>
         <figure>
-            <img src="/assets/img/logo-db.png" id="db-logo" alt="logo-db">
+            <img src="/assets/img/ash-img/logo-pkm.png" id="logo-pkm" alt="logo-db">
         </figure>
     </header>
     <div class="container">
-        <h2 id="nome-guerreiro">Son Goku (Criança)</h2>
+        <h2 id="nome-guerreiro">Ash Ketchum</h2>
         <div id="personagem">
             <select id="escolha-personagem" onchange="trocarPersonagem()">
                 <option selected>Selecione</option>
@@ -28,11 +28,12 @@
                 <option value="gohan.html">Gohan</option>
                 <option value="ash.html">Ash</option>
             </select>
-            <img src="./assets/img/goku-1.png" id="guerreiro" />
+            <!-- <img src="./assets/img/ash-img/ash-y-picachu-png.png" id="guerreiro" /> -->
+            <img src="./assets/img/ash-img/ash-y-picachu-png.png" id="guerreiro" />
             <div class="status">
                 <h3></h3>
                 <p>Nivel: <span id="lvl">0</span></p>
-                <p>Poder: <span id="str">0</span></p>
+                <p>Força Total: <span id="str">0</span></p>
             </div>
         </div>
         <div class="buttons">
