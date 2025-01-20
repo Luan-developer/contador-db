@@ -113,7 +113,7 @@ const PokemonsDeAsh = [
     },
     // Primeape
     {
-        nome: "Primeape - Lutador/Voador",
+        nome: "Primeape - Lutador",
         src: "./assets/img/ash-img/pkm-premeape.png",
         largura: "300px",
         poder: 455,
@@ -133,11 +133,60 @@ const PokemonsDeAsh = [
         poder: 500,
     },
     // Kingler
-        {
+    {
         nome: "Kingler - Agua",
         src: "./assets/img/ash-img/pkm-kingler.png",
         largura: "300px",
-            poder: 525,
+        poder: 525,
+    },
+    // Swellow
+    {
+        nome: "Swellow - Normal/Voador",
+        src: "./assets/img/ash-img/pkm-swellow.png",
+        largura: "300px",
+        poder: 430,
+    },
+    // Corpish
+    {
+        nome: "Corpish - Agua",
+        src: "./assets/img/ash-img/pkm-corpish.png",
+        largura: "300px",
+        poder: 308,
+    },
+    // Torterra
+    {
+        nome: "Torterra - Planta/Terra",
+        src: "./assets/img/ash-img/pkm-torterra.png",
+        largura: "300px",
+        poder: 525,
+    },
+    // Staraptor
+    {
+        nome: "Staraptor - Normal/Voador",
+        src: "./assets/img/ash-img/pkm-staraptor.png",
+        largura: "300px",
+        poder: 525,
+    },
+    // Talonflame
+    {
+        nome: "Talonflame - Fogo/Voador",
+        src: "./assets/img/ash-img/pkm-talonflame.png",
+        largura: "300px",
+        poder: 499,
+    },
+    // Gliscor
+    {
+        nome: "Gliscor - Voador/Terra",
+        src: "./assets/img/ash-img/pkm-gliscor.png",
+        largura: "300px",
+        poder: 510,
+    },
+    // Scraggy
+    {
+        nome: "Scraggy - Voador/Terra",
+        src: "./assets/img/ash-img/pkm-scraggy.png",
+        largura: "200px",
+        poder: 510,
     }
 ];
 
