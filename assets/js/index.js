@@ -8,6 +8,7 @@ const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
 const body = document.querySelector(".body");
 const LogoDb = document.getElementById("db-logo");
+const container = document.querySelector(".container");
 
 //variavel que armazena o número do nivel
 let count = 0;
@@ -27,10 +28,14 @@ function LevelUp() {
     }
     else if (count === 14) {
         personagem.setAttribute("src", "./assets/img/goku-2.png");
-        h2.textContent = "Son Goku (Adulto)"
-        personagem.style.width = "150px"
+        h2.textContent = "Son Goku (Adulto)";
+        // h2.style.color = "#fff"
+        personagem.style.width = "150px";
+        // container.style.backgroundImage = "url(https://i.pinimg.com/736x/e1/c2/ba/e1c2ba664a45a0ce72f69c72f1792631.jpg)";
+        container.style.color = "#000";
     } else if (count === 24) {
         personagem.setAttribute("src", "./assets/img/goku-3.png");
+        // container.style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5Vm-uvs8waJql_Gl9bDcxb-PhyND2XFl719ObJnTYoV8c9KGxIX7xlwLptp-drnSOhs&usqp=CAU)";
         h2.style.color = "rgb(70, 5, 5)";
         h2.textContent = "Son Goku (Kaioken)";
         personagem.style.width = "200px";
@@ -186,13 +191,14 @@ function Reset() {
     personagem.setAttribute("src", "./assets/img/goku-1.png"); // Caminho da imagem inicial
     h2.textContent = "Son Goku (Criança)"; // Título inicial
     h2.style.color = "#000"; // Cor inicial do texto
+    container.style.backgroundImage = "./assets/img/back\ -\ goku-1.png"
     personagem.style.width = "175px"; // Largura inicial
 }
 
 //Eventos que chamam as suas devidas funções
 btnPositive.addEventListener("click", LevelUp);
 btnNegative.addEventListener("click", RemoveLevel); 
-LogoDb.addEventListener("click", Reset)
+LogoDb.addEventListener("click", Reset);
 
 
 

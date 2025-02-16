@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador - animado</title>
-    <!-- <link rel="stylesheet" href="./assets/css/vegeta.css"> -->
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="./assets/js/vegeta.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" href="./assets/img/esferas-db.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/genki-dama.css">
+    <script src="./assets/js/genki-dama.js" defer></script>
 </head>
 
 <body>
@@ -17,10 +14,7 @@
         <figure>
             <img src="/assets/img/logo-db.png" id="db-logo" alt="logo-db">
         </figure>
-    </header>
-    <div class="container">
-        <h2 id="nome-guerreiro">Vegeta (Criança)</h2>
-        <div id="personagem">
+        <div class="personagem">
             <select id="escolha-personagem" onchange="trocarPersonagem()">
                 <option selected>Selecione</option>
                 <option value="vegeta.html">Vegeta</option>
@@ -29,12 +23,13 @@
                 <option value="ash.html">Ash</option>
                 <option value="goku-genki-dama.html">Goku (Genki Dama)</option>
             </select>
-            <img src="./assets/img/vegeta-img/vegeta-kid.png" id="guerreiro" />
-            <div class="status">
-                <h3></h3>
-                <p>Nivel: <span id="lvl">0</span></p>
-                <p>Poder: <span id="str">0</span></p>
-            </div>
+    </header>
+    <div class="container">
+        <div id="genki-dama">
+            <span class="number">0</span>
+        </div>
+        <div>
+            <img src="./assets/img/goku-genki-dama.png" alt="goku-genki-dama" />
         </div>
         <div class="buttons">
             <button class="btn btn1">Aumentar</button>
