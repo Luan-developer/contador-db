@@ -183,11 +183,116 @@ const PokemonsDeAsh = [
     },
     // Scraggy
     {
-        nome: "Scraggy - Voador/Terra",
+        nome: "Scraggy - Lutador",
         src: "./assets/img/ash-img/pkm-scraggy.png",
         largura: "200px",
         poder: 510,
-    }
+    },
+        // Bayleef
+    {
+        nome: "Bayleef - Planta",
+        src: "./assets/img/ash-img/bayleef.png",
+        largura: "350px",
+        poder: 405,
+    },
+    // Buizel
+    {
+        nome: "Buizel - Agua",
+        src: "./assets/img/ash-img/buizel.png",
+        largura: "350px",
+        poder: 330,
+    },
+    // Glalie
+    {
+        nome: "Glalie - Gelo",
+        src: "./assets/img/ash-img/glalie.png",
+        largura: "300px",
+        poder: 480,
+    },
+    // Goodra
+    {
+        nome: "Goodra - Dragão",
+        src: "./assets/img/ash-img/goodra.png",
+        largura: "300px",
+        poder: 600,
+    },
+    //Rowtle
+    {
+        nome: "Rowtle - Grama/Voando",
+        src: "./assets/img/ash-img/rowtle.png",
+        largura: "300px",
+        poder: 320,
+    },
+    // Lapras 
+    {
+        nome: "Lapras - Água/Gelo",
+        src: "./assets/img/ash-img/lapras.png",
+        largura: "300px",
+        poder: 535,
+    },
+    // Butterfree
+    {
+        nome: "Butterfree - Inseto/Voador",
+        src: "./assets/img/ash-img/butterfree.png",
+        largura: "300px",
+        poder: 535,
+    },
+    // Unfezant 
+    {
+        nome: "Unfezant - Normal/Voador",
+        src: "./assets/img/ash-img/unfezant.png",
+        largura: "300px",
+        poder: 488,
+    },
+    // Oshawott
+    {
+        nome: "Oshawott - Água",
+        src: "./assets/img/ash-img/oshawott.png",
+        largura: "300px",
+        poder: 308,
+    },
+    //Bulbasaur
+    {
+        nome: "Bulbasaur - Grama/Veneno",
+        src: "./assets/img/ash-img/bulbasaur.png",
+        largura: "350px",
+        poder: 318,
+    },
+    // Squirtle
+    {
+        nome: "Squirtle - Água",
+        src: "./assets/img/ash-img/squirtle.png",
+        largura: "250px",
+        poder: 314,
+    },
+    // Tauros
+    {
+        nome: "Tauros - Normal",
+        src: "./assets/img/ash-img/tauros.png",
+        largura: "350px",
+        poder: 490,
+    },
+    //Torkoal
+    {
+        nome: "Torkoal - Fogo",
+        src: "./assets/img/ash-img/torkoal.png",
+        largura: "350px",
+        poder: 470,
+    },
+    //Donphan
+    {
+        nome: "Donphan  - Terra",
+        src: "./assets/img/ash-img/donphan.png",
+        largura: "350px",
+        poder: 500,
+    },
+    //Quilava
+    {
+        nome: "Quilava  - Fogo",
+        src: "./assets/img/ash-img/quilava.png",
+        largura: "250px",
+        poder: 500,
+    },
 ];
 
 function LevelUp() {
