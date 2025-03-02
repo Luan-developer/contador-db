@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top:15px;
+    margin-top: 15px;
 }
 
 #genki-dama {
@@ -37,7 +37,7 @@ body {
         0 0 40px rgba(0, 191, 255, 0.6),
         0 0 60px rgba(0, 191, 255, 0.4);
     animation: energia 2s infinite alternate ease-in-out;
-    color:#fff;
+    color: #fff;
 }
 
 /* Efeito de energia pulsando */
@@ -199,3 +199,4 @@ button:hover {
     cursor: pointer;
     margin-left: 4px;
 }
+

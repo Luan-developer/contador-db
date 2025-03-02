@@ -188,7 +188,7 @@ const PokemonsDeAsh = [
         largura: "200px",
         poder: 510,
     },
-        // Bayleef
+    // Bayleef
     {
         nome: "Bayleef - Planta",
         src: "./assets/img/ash-img/bayleef.png",
@@ -453,6 +453,4 @@ function escolherPokemonAleatorio() {
 btnPositive.addEventListener("click", LevelUp);
 LogoPkm.addEventListener("click", Reset);
 btnNegative.addEventListener("click", RemoveLevel);
-
-
 

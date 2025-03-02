@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador - animado</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    <script src="./assets/js/ash.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" href="assets/img/ash-img/icon-pokebola.png" type="image/x-icon">
+    <script src="./assets/js/crossover.js" defer></script>
 
 </head>
 
 <body class="body">
     <header>
         <figure>
-            <img src="/assets/img/ash-img/logo-pkm.png" id="logo-pkm" alt="logo-db">
+            <img src="/assets/img/crossover/reset.png" id="db-logo" alt="logo-db" style="width: 40px; padding: 5px;">
         </figure>
     </header>
-    <div class="container">
-        <h2 id="nome-guerreiro">Ash Ketchum</h2>
+    <div class="container goku-container">
+        <h2 id="nome-guerreiro">????????</h2>
         <div id="personagem">
             <select id="escolha-personagem" onchange="trocarPersonagem()">
                 <option selected>Selecione</option>
@@ -30,11 +28,10 @@
                 <option value="goku-genki-dama.html">Goku (Genki Dama)</option>
                 <option value="crossover.html">Crossover</option>
             </select>
-            <img src="./assets/img/ash-img/ash-y-picachu-png.png" id="guerreiro" />
+            <img src="./assets/img/crossover/interrogacao.png" id="guerreiro" />
             <div class="status">
                 <h3></h3>
-                <p>Nivel: <span id="lvl">0</span></p>
-                <p>Força Total: <span id="str">0</span></p>
+                <p>Contagem: <span id="lvl">0</span></p>
             </div>
         </div>
         <div class="buttons">
@@ -42,9 +39,10 @@
             <button class="btn btn2">Reduzir</button>
         </div>
     </div>
-        <footer>
-            <p>Criado por Gabriel Luan</p>
-        </footer>
+
+    <footer>
+        <p>Criado por Gabriel Luan</p>
+    </footer>
 </body>
 
 </html>
