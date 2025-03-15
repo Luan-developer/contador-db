@@ -3,13 +3,17 @@ const btnNegative = document.querySelector(".btn2");
 const reset = document.getElementById("reset");
 const personagem = document.querySelector("#guerreiro");
 const level = document.getElementById("lvl");
-const strenght = document.getElementById("str");
 let h2 = document.querySelector("h2");
 const body = document.querySelector(".body");
 const LogoDb = document.getElementById("db-logo");
 const container = document.querySelector(".container");
 
 let count = localStorage.getItem("level") ? parseInt(localStorage.getItem("level")) : 0;
+
+// Lista de índices usados, salva no localStorage
+let usedIndices = localStorage.getItem("usedIndices")
+    ? JSON.parse(localStorage.getItem("usedIndices"))
+    : [];
 
 const crossover = [
     { nome: "Sonic", src: "./assets/img/crossover/sonic.png", largura: "250px" },
@@ -30,120 +34,76 @@ const crossover = [
     { nome: "Ippo", src: "./assets/img/crossover/ippo.png", largura: "350px" },
 ];
 
+// Função para gerar um índice aleatório sem repetir
+function getRandomCharacterIndex() {
+    const availableIndices = crossover.map((_, index) => index).filter(index => !usedIndices.includes(index));
+    if (availableIndices.length === 0) {
+        usedIndices = []; // Reinicia se todos os personagens já foram exibidos
+        localStorage.setItem("usedIndices", JSON.stringify(usedIndices));
+    }
+    const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+    usedIndices.push(randomIndex); // Adiciona o índice à lista de usados
+    localStorage.setItem("usedIndices", JSON.stringify(usedIndices)); // Salva no localStorage
+    return randomIndex;
+}
+
 function atualizarPersonagem() {
+    // Calcula o intervalo atual com base no nível
+    const nivelAtual = Math.floor(count / 10);
 
-    switch (count) {
-        case 1:
-            h2.textContent = crossover[0].nome;
-            personagem.setAttribute("src", crossover[0].src);
-            personagem.style.width = crossover[0].largura;
-            break;
+    if (nivelAtual > 0) {
+        if (count % 10 === 0 && localStorage.getItem("characterIndex") === null) {
+            // Define um novo personagem aleatório apenas ao atingir múltiplos de 10
+            const randomIndex = getRandomCharacterIndex();
+            localStorage.setItem("characterIndex", randomIndex); // Salva o índice atual
+        }
 
-        case 10:
-            h2.textContent = crossover[1].nome;
-            personagem.setAttribute("src", crossover[1].src);
-            personagem.style.width = crossover[1].largura;
-            break;
+        // Recupera o índice atual do personagem
+        const currentCharacterIndex = localStorage.getItem("characterIndex")
+            ? parseInt(localStorage.getItem("characterIndex"))
+            : null;
 
-
-        case 20:
-            h2.textContent = crossover[2].nome;
-            personagem.setAttribute("src", crossover[2].src);
-            personagem.style.width = crossover[2].largura;
-            break;
-
-        case 30:
-            h2.textContent = crossover[3].nome;
-            personagem.setAttribute("src", crossover[3].src);
-            personagem.style.width = crossover[3].largura;
-            break;
-
-        case 40:
-            h2.textContent = crossover[4].nome;
-            personagem.setAttribute("src", crossover[4].src);
-            personagem.style.width = crossover[4].largura;
-            break;
-
-        case 50:
-            h2.textContent = crossover[5].nome;
-            personagem.setAttribute("src", crossover[5].src);
-            personagem.style.width = crossover[5].largura;
-            break;
-
-        case 60:
-            h2.textContent = crossover[6].nome;
-            personagem.setAttribute("src", crossover[6].src);
-            personagem.style.width = crossover[6].largura;
-            break;
-
-        case 70:
-            h2.textContent = crossover[7].nome;
-            personagem.setAttribute("src", crossover[7].src);
-            personagem.style.width = crossover[7].largura;
-            break;
-
-        case 80:
-            h2.textContent = crossover[8].nome;
-            personagem.setAttribute("src", crossover[8].src);
-            personagem.style.width = crossover[8].largura;
-            break;
-
-        case 90:
-            h2.textContent = crossover[9].nome;
-            personagem.setAttribute("src", crossover[9].src);
-            personagem.style.width = crossover[9].largura;
-            break;
-
-        case 100:
-            h2.textContent = crossover[10].nome;
-            personagem.setAttribute("src", crossover[10].src);
-            personagem.style.width = crossover[10].largura;
-            break;
-
-        case 110:
-            h2.textContent = crossover[11].nome;
-            personagem.setAttribute("src", crossover[11].src);
-            personagem.style.width = crossover[11].largura;
-            break;
-
-        case 120:
-            h2.textContent = crossover[12].nome;
-            personagem.setAttribute("src", crossover[12].src);
-            personagem.style.width = crossover[12].largura;
-            break;
-
-        case 130:
-            h2.textContent = crossover[13].nome;
-            personagem.setAttribute("src", crossover[13].src);
-            personagem.style.width = crossover[13].largura;
-            break;
-
-        case 140:
-            h2.textContent = crossover[14].nome;
-            personagem.setAttribute("src", crossover[14].src);
-            personagem.style.width = crossover[14].largura;
-            break;
-
-        case 150:
-            h2.textContent = crossover[15].nome;
-            personagem.setAttribute("src", crossover[15].src);
-            personagem.style.width = crossover[15].largura;
-            break;
-
-
+        const personagemAtual = crossover[currentCharacterIndex];
+        if (personagemAtual) {
+            h2.textContent = personagemAtual.nome;
+            personagem.setAttribute("src", personagemAtual.src);
+            personagem.style.width = personagemAtual.largura;
+        }
+    } else {
+        // Personagem inicial padrão
+        h2.textContent = "??????????";
+        personagem.setAttribute("src", "./assets/img/crossover/interrogacao.png");
+        personagem.style.width = "300px";
     }
 }
 
 function levelUp() {
     count++;
+    if (count % 10 === 0) {
+        // Reseta o índice para disparar a escolha de um novo personagem
+        localStorage.removeItem("characterIndex");
+    }
     localStorage.setItem("level", count);
     level.textContent = count;
     atualizarPersonagem();
 }
 
 function removeLevel() {
-    count--;
+    if (count > 0) {
+        count--;
+        localStorage.setItem("level", count);
+        level.textContent = count;
+        atualizarPersonagem();
+    }
+}
+
+function Reset() {
+    // Reinicia o nível e o personagem atual
+    count = 0;
+    usedIndices = [];
     localStorage.setItem("level", count);
+    localStorage.setItem("usedIndices", JSON.stringify(usedIndices));
+    localStorage.removeItem("characterIndex");
     level.textContent = count;
     atualizarPersonagem();
 }
@@ -155,20 +115,12 @@ function trocarPersonagem() {
         window.location.href = url; // Redireciona para a página correspondente
     }
 }
-function Reset() {
-    // Reinicia os valores, mas mantém a imagem atual
-    count = 0;
-    localStorage.setItem("level", count);
-    level.textContent = "0"; // Atualiza o nível no HTML
-    atualizarPersonagem(); // Mantém o personagem visível
-}
-
 
 // Atualiza a interface ao carregar a página
 level.textContent = count;
 atualizarPersonagem();
 
+// Adiciona eventos aos botões
 btnPositive.addEventListener("click", levelUp);
-LogoDb.addEventListener("click", Reset);
 btnNegative.addEventListener("click", removeLevel);
-
+LogoDb.addEventListener("click", Reset);
